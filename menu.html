@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Nineteen Café</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="cartModal" class="modal">
+    <div class="modal-content cart-box">
+        <span class="close" onclick="closeCart()">&times;</span>
+        <h2>Your Order</h2>
+
+        <div id="cartItems"></div>
+
+        <h3>Total: $<span id="cartTotal">0.00</span></h3>
+
+        <button class="confirm-btn" onclick="checkout()">Checkout</button>
+        
+
+    </div>
+</div>
+
+
+<header>
+    <nav>
+        <h2 class="logo">Nineteen Café</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="menu.html">Menu</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<h1 class="page-title">Our Menu</h1>
+<button class="cart-btn" onclick="openCart()">🛒 Cart (<span id="cartCount">0</span>)</button>
+
+
+<div class="menu-container">
+
+    <div class="menu-item">
+        <img src="latte.jpg" alt="">
+        <h3>Latte</h3>
+        <p>$3.50</p>
+        <button class="order-btn" onclick="addToCart('Latte', 3.50)">Add to Cart</button>
+
+    </div>
+
+    <div class="menu-item">
+        <img src="cappuccino.jpg" alt="">
+        <h3>Cappuccino</h3>
+        <p>$3.00</p>
+        <button class="order-btn" onclick="addToCart('Cappuccino', 3.00)">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+        <img src="Iced Mocha Oat Latte_ Discover a Chocolatey Coffee Delight!.jpg" alt="">
+        <h3>Mocha</h3>
+        <p>$4.00</p>
+        <button class="order-btn" onclick="addToCart('Mocha', 4.00)">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+        <img src="Quick & Easy Chocolate Almond Croissants.jpg" alt="">
+        <h3>Croissant</h3>
+        <p>$2.20</p>
+        <button class="order-btn" onclick="addToCart('Croissant', 2.20)">Add to Cart</button>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2025 Nineteen Café | All Rights Reserved.</p>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>

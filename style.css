@@ -1,0 +1,221 @@
+/* Global */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(bg2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+a { text-decoration: none; }
+header {
+    background: #222;
+    padding: 15px 0;
+}
+nav {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+nav ul li a {
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+nav ul li a.active,
+nav ul li a:hover {
+    background: #ff6600;
+}
+
+
+/* Hero Section */
+.hero {
+    background: url('https://i.imgur.com/8g3Ftwk.jpeg') center/cover no-repeat;
+    height: 75vh;
+    color: white;
+    text-align: center;
+    padding-top: 180px;
+}
+.hero .btn {
+    display: inline-block;
+    background: #ff6600;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.btn:hover {
+    color: rgb(177, 180, 181);
+    background-color: rgb(24, 29, 28);
+}
+/* Features */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 50px 20px;
+}
+/* Menu */
+.page-title {
+    color: #e8f4ef;
+    text-align: center;
+    margin-top: 30px;
+}
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+    width: 90%;
+    margin: auto;
+    padding: 40px 0;
+}
+.menu-item {
+    background: white;
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+}
+.menu-item:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    color: bisque;
+}
+.menu-item img {
+    width: 100%;
+    border-radius: 10px;
+    height: 180px;
+    object-fit: cover;
+}
+/* Story Page */
+.story {
+    padding: 50px;
+    text-align: center;
+    background: #afb3b5d6;
+}
+/* Contact Page */
+.contact-section {
+    
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 40px 10px;
+}
+.contact-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    margin-top: 40px;
+}
+@media (max-width: 600px) {
+    nav ul {
+        display: none;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        padding-top: 120px;
+        height: 60vh;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 1024px) and (min-width: 601px) {
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+.feature-box {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s ease; /* smooth animation */
+    transform: translateY(0);
+}
+/* Hover Effect */
+.feature-box:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+.cart-btn {
+    background: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    margin: 20px;
+}
+.cart-btn:hover {
+    background: #ff8800;
+}
+/* Cart styles */
+.cart-box {
+    max-height: 80vh;
+    overflow-y: auto;
+}
+.cart-item {
+    background: #f7f7f7;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+.cart-item button {
+    padding: 3px 8px;
+    border: none;
+    background: #ddd;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
